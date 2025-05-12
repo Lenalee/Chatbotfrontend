@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Audi SQ5 251 kW</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="widget.js"></script>
+</head>
+
+<body>
+  <script>
+    // Simulated car data for the chatbot
+    const car = {
+      id: "8473",
+      title: "Audi SQ5 251 kW",
+      price: "1, 445, 990 Kč",
+      price_no_vat: "1,195,033 Kč",
+      mileage: "92 000 km",
+      first_registration: "4/2023",
+      power: "251 kW (341 hp)",
+      consumption: "7 l/100 km",
+      co2_emissions: "185 g/km",
+      location: "Germany",
+      body_color: "Gray",
+      type_of_finish: "Metallic",
+      body: "SUV / Off-road"
+    };
+    window.LC_API = window.LC_API || {};
+      window.LC_API.on_after_load = function () {
+        LC_API.set_custom_variables([
+          { name: "car_id", value: car.id },
+          { name: "car_title", value: car.title },
+          { name: "price", value: car.price },
+          { name: "price_no_vat", value: car.price_no_vat },
+          { name: "mileage", value: car.mileage },
+          { name: "first_registration", value: car.first_registration },
+          { name: "power", value: car.power },
+          { name: "consumption", value: car.consumption },
+          { name: "co2_emissions", value: car.co2_emissions },
+          { name: "location", value: car.location },
+          { name: "body_color", value: car.body_color },
+          { name: "type_of_finish", value: car.type_of_finish },
+          { name: "body", value: car.body },
+        ]);
+      };
+
+  </script>
+  <script src="livechat.js"></script>
+  <script>window.LiveChatWidget.init();</script>
+
+<div class="row-container">
+
+  <div class="container">
+    <header>
+      <h1>example car: Audi SQ5 251 kW</h1>
+      <p class="subtitle">Diesel • Automatic • 4×4</p>
+    </header>
+    <div class="main-content">
+      <div class="image-box">
+        <img src="pic1.jpeg" alt="Audi SQ5">
+      </div>
+  
+      <div class="details">
+        <ul class="features">
+          <li><strong>Mileage:</strong> 92 000 km</li>
+          <li><strong>First registration:</strong> 4/2023</li>
+          <li><strong>Power:</strong> 251 kW (341 hp)</li>
+          <li><strong>Consumption:</strong> 7 l/100 km</li>
+          <li><strong>CO₂ emissions:</strong> 185 g/km</li>
+          <li><strong>Location:</strong> Germany</li>
+          <li><strong>Body color:</strong> Gray</li>
+          <li><strong>Type of finish:</strong> Metallic</li>
+          <li><strong>Body:</strong> SUV / Off-road</li>
+        </ul>
+  
+        <div class="price-box">
+          <h2>Price</h2>
+          <p class="price-major">CZK 1,445,990</p>
+          <p class="price-minor">without VAT: CZK 1,195,033</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <header>
+      <h1>Instrukce pro testování chatbota</h1>
+    </header>
+    <div class="main-content">
+      <p>
+        Vítejte v testovacím prostředí našeho chatbota! Tento chatbot je navržen pro pomoc zákazníkům Carvago.
+      </p>
+      <h2>Co potřebujete vědět:</h2>
+      <ul>
+        <li>Chatbot má přístup k datům o voze, která vidíte na této stránce</li>
+        <li>Chatbot zná základní informace o fungování Carvago pro Českou republiku (<a href="carvago_info.html">zobrazit popis</a>)
+        </li>
+        <li>Chat bot má prompt s instrukcemi, který lze prohlédnout dole(skrolujte dolu)</li>
+        <li>Během testování je bot napojen na testovací účet – žádný živý agent nebude k dispozici</li>
+      </ul>
+      <h2>Co chatbot umí:</h2>
+      <ul>
+        <li>Odpovídat na otázky o zobrazeném voze</li>
+        <li>Poskytovat informace o službách Carvago</li>
+        <li>Přesměrovat zákazníka na lidského operátora (v reálném provozu)</li>
+        <li>Nabídnout možnost zanechat vzkaz (odešle se email), pokud není agent k dispozici</li>
+      </ul>
+      <h2>Návrhy pro testování:</h2>
+      <ul>
+        <li>Zeptejte se na parametry vozu (cena, výkon, spotřeba…)</li>
+        <li>Položte běžné otázky zákazníků o nákupu vozu přes Carvago</li>
+        <li>Zkuste téma nesouvisející s auty (chatbot by měl odmítnout)</li>
+        <li>Požádejte o akci, kterou chatbot nemůže provést (měl by nabídnout přesměrování)</li>
+      </ul>
+      <h2>Vaše zpětná vazba je důležitá!</h2>
+      <p>
+        Jakékoliv připomínky nebo návrhy na zlepšení prosím zapište do
+        <a href="https://docs.google.com/spreadsheets/d/1P09SArhkxFzv8O863orR2Mce3uEGdiXh_q5R-khzLJw/edit?usp=sharing">tohoto dokumentu</a>
+        nebo kontaktujte mě (Yaninu Arameleva) přes Slack.
+      </p>
+    </div>
+  </div>
+</div>
+  <div class="container">
+    <header>
+      <h1>Prompt for chatbot</h1>
+    </header>
+    <div class="main-content">
+      <p>
+        You are CarvagoBot, an expert virtual assistant on Carvago's website.
+        Your goals:
+      </p>
+      <ul>
+        <li>Greet visitors warmly and answer questions about our inventory, policies, and buying process.</li>
+        <li>Keep responses friendly, concise, and focused on the user's immediate need.</li>
+        <li>Never invent details or use the phrase "used car".</li>
+        <li>Only discuss topics related to cars, Carvago's services, and the car buying process.</li>
+        <li>Do not engage in general chatting or non-car-related conversations.</li>
+      </ul>
+      <p>Use these tools when needed:</p>
+      <ul>
+        <li>get_carvago_knowledge_base(query): Returns factual info about Carvago.</li>
+        <li>get_whole_chat_history(user_id): Retrieves past interactions when relevant.</li>
+        <li>transfer_chat_tool(chat_id, message): Transfers to a human agent after sending a closing message.</li>
+        <li>send_email_tool(chat_id, message): Sends an email to our sales team.</li>
+      </ul>
+      <p>
+        When to transfer to a human:
+        <ul>
+          <li>If you can't confidently answer from the knowledge base or history</li>
+          <li>If the user asks you to perform an action you can't do</li>
+          <li>Always send a closing message first explaining the transfer</li>
+          <li>If no agents are available, apologize and offer to send a message via email.</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+  </div>
+
+  
+
+
+</body>
+
+</html>

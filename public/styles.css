@@ -1,0 +1,134 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fa;
+    color: #1f2a44;
+    line-height: 1.5;
+}
+
+/* the first car panel (unchanged) */
+.container {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 900px;
+}
+
+/* give every container its own header bar */
+.container header {
+    background: #7c83a5;
+    padding: 1rem;
+    border-bottom: 1px solid #e1e5eb;
+}
+
+.container header h1 {
+    font-size: 1.4rem;
+}
+
+.container .subtitle {
+    color: #384150;
+}
+
+/* inner padding for the body of each panel */
+.container .main-content {
+    padding: 1rem;
+}
+
+/* nice spacing for paragraphs, headings & lists */
+.container h2 {
+    font-size: 1.1rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.container p,
+.container ul {
+    margin-bottom: 0.75rem;
+}
+
+.container ul {
+    list-style: disc inside;
+}
+
+.container ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* special flex-row wrapper */
+.row-container {
+    display: flex;
+    gap: 1rem;
+    max-width: 90%;
+    margin: 2rem auto;
+}
+
+/* each child panel flexes to about half width */
+.row-container .container {
+    flex: 1 1 45%;
+    margin: 0;
+    /* override the vertical margin */
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.features li {
+    margin-bottom: 0.75rem;
+}
+.features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.features li {
+    margin-bottom: 0.75rem;
+}
+
+.price-box {
+    background: #f0fdf4;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.price-box h2 {
+    margin-bottom: 0.5rem;
+    color: #166534;
+}
+
+.price-major {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.price-minor {
+    color: #5f6f8a;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.my-pre {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: inherit;
+    /* so it doesn’t default to monospace */
+    white-space: pre-wrap;
+    /* if you still want wrapping */
+}
