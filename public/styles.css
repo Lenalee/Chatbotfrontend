@@ -132,3 +132,17 @@ img {
     white-space: pre-wrap;
     /* if you still want wrapping */
 }
+
+.preserve-whitespace {
+    white-space: pre-wrap;
+    /* like “pre” but wraps lines */
+    word-wrap: break-word;
+    /* old name for overflow-wrap */
+    overflow-wrap: break-word;
+    /* break long words/URLs */
+
+    /* ensure it can’t grow past its parent */
+    width: 100%;
+    box-sizing: border-box;
+    /* include padding in that 100% */
+}
